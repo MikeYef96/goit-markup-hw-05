@@ -14,7 +14,7 @@
 
 <body>
     <!--HEADER-->
-    <header class="header">
+    <header class="header page-header">
         <div class="header-container">
             <nav class="nav-container ">
                 <a href="index.html" class="title-webstudio">
@@ -58,7 +58,7 @@
             <h1 class="hero-title">
                 Эффективные решения <br>для вашего бизнеса
             </h1>
-            <button type="submit" class="hero-button">Заказать услугу</button>
+            <button type="submit" class="hero-button" data-modal-open>Заказать услугу</button>
         </section>
 
         <!--BENEFITS=============================================================-->
@@ -119,13 +119,28 @@
             <div class="container portfolio-container">
                 <ul class="portfolio-list">
                     <li class="item">
-                        <a href="#!"><img src="./img/portfolio-img1.jpg" alt="Портфолио" width="370" height="294"></a>
+                        <img src="./img/portfolio-img1.jpg" alt="Портфолио" width="370" height="294">
+                        <div class="portfolio-list__container">
+                            <p class="portfolio-list__info">
+                                Десктопные приложения
+                            </p>
+                        </div>
                     </li>
                     <li class="item">
-                        <a href="#!"><img src="./img/portfolio-img2.jpg" alt="Портфолио" width="370" height="294"></a>
+                        <img src="./img/portfolio-img2.jpg" alt="Портфолио" width="370" height="294">
+                        <div class="portfolio-list__container">
+                            <p class="portfolio-list__info">
+                                Мобильные приложения
+                            </p>
+                        </div>
                     </li>
                     <li class="item">
-                        <a href="#!"><img src="./img/portfolio-img3.jpg" alt="Портфолио" width="370" height="294"></a>
+                        <img src="./img/portfolio-img3.jpg" alt="Портфолио" width="370" height="294">
+                        <div class="portfolio-list__container">
+                            <p class="portfolio-list__info">
+                                Дизайнерские решения
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -403,6 +418,23 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close-button" data-modal-close>
+                <svg class="modal-icons">
+                    <use href="./img/symbol-defs.svg#icon-cross-form"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- <script>
+        const { height: pageHeaderHeight } = document
+            .querySelector("page-header").getBoundingClientRect();
+        document.body.style.paddingTop = '${ pageHeaderHeight }px';
+    </script> -->
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
